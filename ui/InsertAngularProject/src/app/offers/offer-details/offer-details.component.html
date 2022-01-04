@@ -1,0 +1,63 @@
+<div *ngIf="data.Id !== 0; then editTitle else newTitle"></div>
+<ng-template #editTitle>
+    <!-- <h2 mat-dialog-title>Edit category: {{data.Name}}</h2> -->
+    <div mat-dialog-title class="dialog-title">
+        <h2>Edit offer: {{data.Title}}
+            <button mat-icon-button aria-label="close dialog" mat-dialog-close style="float: right;">
+                <mat-icon>close</mat-icon>
+            </button>
+        </h2>
+    </div>
+</ng-template>
+<ng-template #newTitle>
+    <div mat-dialog-title class="dialog-title">
+        <h2>Add new offer
+            <button mat-icon-button aria-label="close dialog" mat-dialog-close style="float: right;">
+                <mat-icon>close</mat-icon>
+            </button>
+        </h2>
+    </div>
+</ng-template>
+
+<mat-dialog-content>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Offer title</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="offerTitle" placeholder="Enter offer title">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="offerDescription" placeholder="Enter offer description">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="offerPrice" placeholder="Enter offer price">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Category</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="offerCategory">
+                <option *ngFor="let item of categoryList" [value]="item.Name">
+                    {{item.Name}}
+                </option>
+              </select>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Created at</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="offerCreated" disabled>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button (click)="addOffer()" *ngIf="data.Id==0" class="btn btn-primary">
+        Add
+    </button>
+    <button (click)="updateOffer()" *ngIf="data.Id!=0" class="btn btn-success">
+        Update
+    </button>
+</mat-dialog-actions>
+
