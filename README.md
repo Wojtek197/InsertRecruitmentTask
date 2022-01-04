@@ -30,6 +30,7 @@ returns offers filtered accordingly.
 fields are obligatory.
 - POST PUT DELETE /category/{id} - manipulate category. For POST and PUT, all
 fields are obligatory.
+
 Allow manipulating offers and categories through Django admin site and DRF&#39;s default
 browsable api.
 In frontend, implement the following:
