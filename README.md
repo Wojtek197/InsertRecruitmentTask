@@ -40,11 +40,18 @@ In frontend, implement the following:
 For the sake of simplicity, don&#39;t worry about the authentication process (so anyone can use all
 endpoints).
 
+# EnvironmentAndVersions
+- Angular CLI: 13.1.2
+- Node: 16.13.1
+- Package Manager: npm 8.3.0
+- Python: 3.10.1
+- SQLite Studio: 3.3.3
+
 
 # HowToRunThisProject
 1. Clone this repository
-2. In the main folder use command prompt and run task-env\scripts\activate - this command run Python and Django environment
-3. cd InsertRecruitmentTaskAPI and run command python manage.py runserver - this command will start the server 
+2. In the main folder use command prompt and run ``` task-env\scripts\activate ``` - this command run Python and Django environment
+3. ```cd InsertRecruitmentTaskAPI``` and run ```python manage.py runserver``` - this command will start the server 
 4. Open SQLLiteStudio, choose option "Add a database" and check file db.sqlite3 from InsertRecruitmentTaskAPI folder
-5. cd ui/InsertAngularProject and run npm install command
-6. run ng serve command
+5. ```cd ui/InsertAngularProject``` and run ```npm install```
+6. run ```ng serve``` command
