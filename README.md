@@ -1,7 +1,7 @@
 # InsertRecruitmentTask
 Recruitment task for the position of "Junior Developer (Angular + Python)" at Insert in Wroclaw
 
-# TaskDescription
+# Task description
 The main objective of this task is to build a simple CRUD app which consists of fundamental
 elements of a REST API and SPA. The app will be a portal with advertisements.
 Data in the app consists of two models:
@@ -40,7 +40,7 @@ In frontend, implement the following:
 For the sake of simplicity, don&#39;t worry about the authentication process (so anyone can use all
 endpoints).
 
-# EnvironmentAndVersions
+# Environment and versions
 - Angular CLI: 13.1.2
 - Node: 16.13.1
 - Package Manager: npm 8.3.0
@@ -48,9 +48,9 @@ endpoints).
 - SQLite Studio: 3.3.3
 
 
-# HowToRunThisProject
+# How to run this project
 1. Clone this repository
-2. In the main folder use command prompt and run ``` task-env\scripts\activate ``` - this command run Python and Django environment
+2. In the main folder use command prompt and run ``` task-env\scripts\activate ``` - this command runs Python and Django environment
 3. ```cd InsertRecruitmentTaskAPI``` and run ```python manage.py runserver``` - this command will start the server 
 4. Open SQLLiteStudio, choose option "Add a database" and check file db.sqlite3 from InsertRecruitmentTaskAPI folder
 5. ```cd ui/InsertAngularProject``` and run ```npm install```
